@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,7 +32,8 @@ const router= createBrowserRouter([
       },
       {
         path: '/post',
-        element: <Post></Post>
+        element: <Post></Post>,
+        loader: ()=> fetch('https://jsonplaceholder.typicode.com/posts')
       },
       {
         path: 'friends',

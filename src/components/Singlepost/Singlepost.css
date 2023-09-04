@@ -1,0 +1,18 @@
+.singlepost{
+    border: 1px solid slateblue;
+    padding: 14px;
+    margin: 20px;
+}
+.showpostdetailbtn{
+    margin-left: 20px;
+    padding: 15px;
+    background-color: aquamarine;
+    font-size: x-large;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.singlepost a{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: beige;
+}
