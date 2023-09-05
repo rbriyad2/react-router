@@ -4,7 +4,7 @@ import './FriendDetail.css'
 
 const FriendDetail = () => {
     const friend = useLoaderData();
-    console.log(friend)
+
     return (
         <div className='frienddetail'>
             <h2>Everything about this person ID: {friend.id}</h2>

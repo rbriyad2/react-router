@@ -15,6 +15,8 @@ import Friends from './components/Friends/Friends.jsx';
 import FriendDetail from './components/FriendDetail/FriendDetail.jsx';
 import Postdetail from './components/Postdetail/Postdetail.jsx';
 import Error from './components/Error/Error.jsx';
+import Countries from './components/Countries/Countries.jsx';
+import Countrydetail from './components/Countrydetail/Countrydetail.jsx';
 const router= createBrowserRouter([
   {
     path: '/',
@@ -22,7 +24,7 @@ const router= createBrowserRouter([
     children:[
       {
         path: '/',
-        element: <Fastpage></Fastpage>
+        element: <Fastpage></Fastpage>,
       },
       {
         path: '/about',
@@ -52,6 +54,17 @@ const router= createBrowserRouter([
         element: <FriendDetail></FriendDetail>,
         loader: ({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
       },
+      {
+        path: '/countries',
+        element: <Countries></Countries>,
+        loader: ()=> fetch('https://restcountries.com/v3.1/all')
+      },
+      {
+        path: '/country/:ccn3',
+        element: <Countrydetail></Countrydetail>,
+        loader: ({params})=>fetch(`https://restcountries.com/v3.1/alpha?codes=${params.ccn3}`)
+      }
+      ,
       {
         path: '*',
         element: <Error></Error>
