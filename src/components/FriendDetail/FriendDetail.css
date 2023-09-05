@@ -4,3 +4,11 @@
     margin-top: 10px;
     border-radius: 10px;
 }
+.frienddetail button{
+    padding: 5px 10px;
+    background-color: #02124d;
+    color: #fff;
+    border-radius: 10px;
+    font-size: x-large;
+    cursor: pointer;
+}
