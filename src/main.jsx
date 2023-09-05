@@ -14,6 +14,7 @@ import Fastpage from './components/Fastpage/Fastpage.jsx';
 import Friends from './components/Friends/Friends.jsx';
 import FriendDetail from './components/FriendDetail/FriendDetail.jsx';
 import Postdetail from './components/Postdetail/Postdetail.jsx';
+import Error from './components/Error/Error.jsx';
 const router= createBrowserRouter([
   {
     path: '/',
@@ -50,6 +51,10 @@ const router= createBrowserRouter([
         path: '/friend/:friendId',
         element: <FriendDetail></FriendDetail>,
         loader: ({params})=>fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
+      },
+      {
+        path: '*',
+        element: <Error></Error>
       }
     ]
   }
